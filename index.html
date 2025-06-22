@@ -36,6 +36,7 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="papers.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -43,6 +44,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="papers.js"></script>
 </head>
 <body>
 
@@ -307,6 +309,29 @@
 </section> -->
 <!--End BibTex citation -->
 
+<h2>Research Papers</h2>
+<input type="text" id="search" placeholder="Search by title, author, or tag...">
+
+<div id="papers">
+  <div class="paper" data-title="Understanding Transformers" data-authors="Jane Doe, John Smith" data-tags="NLP, Transformers">
+    <div class="paper-title"><a href="https://example.com/transformers" target="_blank">Understanding Transformers</a></div>
+    <div class="authors">Jane Doe, John Smith</div>
+    <div class="tags">
+      <span class="tag">NLP</span>
+      <span class="tag">Transformers</span>
+    </div>
+  </div>
+
+  <div class="paper" data-title="Generative Adversarial Networks" data-authors="Alice Brown" data-tags="GANs, Deep Learning">
+    <div class="paper-title"><a href="https://example.com/gans" target="_blank">Generative Adversarial Networks</a></div>
+    <div class="authors">Alice Brown</div>
+    <div class="tags">
+      <span class="tag">GANs</span>
+      <span class="tag">Deep Learning</span>
+    </div>
+  </div>
+</div>
+
 
   <footer class="footer">
   <div class="container">
@@ -334,3 +359,6 @@
 
   </body>
   </html>
+
+
+

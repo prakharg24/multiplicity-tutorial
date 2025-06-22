@@ -1,0 +1,37 @@
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.paper {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.paper-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.authors, .tags {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tag:hover {
+  background-color: #ddd;
+}
