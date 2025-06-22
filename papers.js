@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPage = 1;
   
   // Load CSV and initialize
-  Papa.parse('papers-2206.csv', {
+  const cacheBuster = Date.now();
+  Papa.parse(`papers.csv?v=${cacheBuster}`, {
     download: true,
     header: true,
     skipEmptyLines: true,
