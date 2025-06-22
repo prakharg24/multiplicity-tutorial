@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const papersContainer = document.getElementById('papers');
 
   // Load CSV and render papers
-  Papa.parse('papers.csv', {
+  const version = 'v1'; // update this manually whenever CSV changes
+  Papa.parse(`papers.csv?version=${version}`, {
     download: true,
     header: true,
     skipEmptyLines: true,
