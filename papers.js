@@ -26,18 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
         papersContainer.appendChild(paperDiv);
       });
 
-      setupFiltering(); // Now that papers exist
-    },
-    error: function(err) {
-      console.error("CSV Load Error:", err);
+      setupFiltering(); // Setup search and tag filters
     }
   });
 
   function setupFiltering() {
-    const papers = document.querySelectorAll('.paper');
+    const updateSearch = () => {
+      const query = searchInput.value.toLowerCase();
+      const papers = document.querySelectorAll('.paper');
 
-    searchInput.addEventListener('input', function () {
-      const query = this.value.toLowerCase();
       papers.forEach(paper => {
         const title = paper.dataset.title.toLowerCase();
         const authors = paper.dataset.authors.toLowerCase();
@@ -45,14 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const match = title.includes(query) || authors.includes(query) || tags.includes(query);
         paper.style.display = match ? '' : 'none';
       });
-    });
+    };
 
-    // Add click listeners after rendering
-    document.querySelectorAll('.tag').forEach(tag => {
-      tag.addEventListener('click', function () {
-        searchInput.value = tag.textContent;
-        searchInput.dispatchEvent(new Event('input'));
-      });
+    // Setup input search
+    searchInput.addEventListener('input', updateSearch);
+
+    // Use event delegation to handle tag clicks (works for dynamic content)
+    document.getElementById('papers').addEventListener('click', (e) => {
+      if (e.target.classList.contains('tag')) {
+        searchInput.value = e.target.textContent;
+        updateSearch();
+      }
     });
   }
 });
