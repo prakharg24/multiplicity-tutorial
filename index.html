@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="FAccT 2025 Multiplicity Tutorial Webpage">
-  <meta property="og:title" content="FAccT 2025 Multiplicity Tutorial Webpage"/>
-  <meta property="og:description" content="FAccT 2025 Multiplicity Tutorial Webpage"/>
+  <meta name="description" content="FAccT 2025 Multiplicity Tutorial">
+  <meta property="og:title" content="FAccT 2025 Multiplicity Tutorial"/>
+  <meta property="og:description" content="FAccT 2025 Multiplicity Tutorial"/>
   <meta property="og:url" content="https://prakharg24.github.io/multiplicity-tutorial/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" /> -->
+  <!-- <meta property="og:image:width" content="1200"/> -->
+  <!-- <meta property="og:image:height" content="630"/> -->
 
 
   <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG"> -->
@@ -24,7 +24,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
 
-  <title>FAccT 2025 Tutorial: The Many Faces of Multiplicity</title>
+  <title>FAccT 2025 Tutorial: The Many Faces of Multiplicity in ML</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -55,7 +55,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">The Many Faces of Multiplicity</h1>
+            <h1 class="title is-1 publication-title">The Many Faces of Multiplicity in ML</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -88,7 +88,7 @@
                     <div class="publication-links">
                          <!-- Slides link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://prakharg24.github.io/files/multiplicity_tutorial_slides.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -97,9 +97,20 @@
                       </a>
                     </span>
 
+                    <!-- Demo link -->
+                      <span class="link-block">
+                        <a href="https://huggingface.co/spaces/prakharg24/multiplicity-demo" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-robot"></i>
+                        </span>
+                        <span>Slides</span>
+                      </a>
+                    </span>
+
                     <!-- Feedback Form link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://forms.gle/DwQh8wWs51kpGd3D6" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-clipboard"></i>
@@ -110,7 +121,7 @@
 
                     <!-- Mailing List link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://forms.gle/b3PqwyxaZfj2b8Uz5" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-envelope"></i>
@@ -185,6 +196,9 @@
         <div class="content has-text-justified">
           <p>
             There is a growing debate about the implications of multiplicity for algorithmic decision-making, with concerns of unfair treatment due to conflicting predictions and explanations on one hand, and the potential to find less discriminatory and more interpretable models on the other. In this tutorial, we aim to increase awareness of different perspectives on multiplicity and relate them to broader discussions in the FAccT community.
+          </p>
+          <p>
+            Any feedback for our tutorial or want to be updated about future events? Please use the feedback form and join the mailist list, links above.
           </p>
         </div>
       </div>
@@ -310,18 +324,21 @@
 </section> -->
 <!--End BibTex citation -->
 <section class="section">
-    <div class="columns is-centered has-text-centered">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-          <h2 class="title is-3">Reading List</h2>
+          <h2 class="title is-3">Multiplicity Reading List</h2>
           <div class="content has-text-justified">
           <p>
-            We have provided a reading list. Did we miss your papers? Please let us know.
+            We’ve put together a list of papers related to multiplicity in machine learning. It began with the automated literature review <a href="https://arxiv.org/abs/2501.14959" target="_blank">here</a>, and has gradually grown to include additional work over time.<br>
+            The list is not comprehensive, but we try to update it periodically. As the list is compiled and displayed using several automated processes, it is possible we have missed your work or there may be errors in the list. If your work is missing or something looks off, please let us know <a href="https://forms.gle/7GKkUgpa4SCL8VBSA" target="_blank">using this form</a>, and we’ll be happy to make the necessary updates promptly.
           </p>
         </div>
           <input type="text" id="search" placeholder="Search by title, author, or tag...">
           <div id="papers"></div>
       </div>
     </div>
+  </div>
 </section>
 
 
