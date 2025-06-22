@@ -1,3 +1,10 @@
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search');
   const papersContainer = document.getElementById('papers');
@@ -6,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let allPapers = [];     // will hold all parsed papers
   let filteredPapers = []; // will hold filtered papers after search
   let currentPage = 1;
-
+  
   // Load CSV and initialize
   Papa.parse('papers-2206.csv', {
     download: true,
@@ -14,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     skipEmptyLines: true,
     complete: function(results) {
       allPapers = results.data;
+      shuffleArray(allPapers);
       filteredPapers = allPapers;
       renderPage(currentPage);
       setupFiltering();
