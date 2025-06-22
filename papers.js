@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const papersContainer = document.getElementById('papers');
 
   // Load CSV and render papers
-  Papa.parse('papers.csv', {
+  Papa.parse('papers-2206.csv', {
     download: true,
     header: true,
     skipEmptyLines: true,
