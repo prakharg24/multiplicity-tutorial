@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const papersContainer = document.getElementById('papers');
 
   // Load CSV and render papers
-  const cacheBuster = new Date().getTime(); // current timestamp
-  Papa.parse(`papers.csv?v=${cacheBuster}`, {
+  Papa.parse('papers.csv', {
     download: true,
     header: true,
     skipEmptyLines: true,
